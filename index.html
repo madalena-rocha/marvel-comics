@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Marvel Comics</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Marvel Comics</h1>
+      <div class="line"></div>
+      <ul id="comics"></ul>
+    </div>
+
+    <div id="comic-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="comic-title"></h2>
+
+        <div id="comic-details">
+          <img id="comic-image" />
+          <p id="comic-description"></p>
+        </div>
+
+        <button id="send-button">Enviar</button>
+      </div>
+    </div>
+
+    <div id="map-modal" class="modal">
+      <div id="map"></div>
+      <button id="ok-button">OK</button>
+    </div>
+
+    <div id="address-modal" class="modal">
+      <div class="modal-content">
+        <h2>Tudo Pronto!</h2>
+        <p id="shipping-address"></p>
+
+        <button id="finish-button">Finalizar</button>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz2rYzMUdGNewc0rS2PkbHr6jHKQ3xVSg&callback=initMap"
+    ></script>
+  </body>
+</html>
