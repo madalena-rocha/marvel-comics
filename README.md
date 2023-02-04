@@ -4,7 +4,7 @@
 
 A aplicação consiste em uma tela de lista de quadrinhos, um modal de detalhe do quadrinho e o envio dos quadrinhos para um endereço selecionado no mapa.
 
-![Projeto "Marvel Comics"](./assets/marvel-comics.png)
+![Projeto "Marvel Comics"](.github/marvel-comics.png)
 
 ## ⚙️ APIs Utilizadas
 - API da Marvel: https://developer.marvel.com
