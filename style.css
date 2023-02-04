@@ -1,0 +1,249 @@
+/* GENERAL */
+
+:root {
+  --bg-color: #202124;
+  --text-color: #b0bfc0;
+  --line-color: #303235;
+
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+
+  background: var(--bg-color);
+  color: var(--text-color);
+
+  text-align: center;
+  overflow-y: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+
+/* CONTAINER */
+
+h1 {
+  font-size: 3rem;
+  margin: 2.8rem auto 2.8rem;
+}
+
+.line {
+  width: 87%;
+  height: 0;
+
+  margin: 0 auto 0.6rem;
+
+  border: 1px solid var(--line-color);
+}
+
+/* COMICS */
+
+#comics {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  max-height: calc(100vh - 4.6rem);
+  overflow-y: auto;
+}
+
+/* SCROLLBAR */
+
+#comics::-webkit-scrollbar {
+  width: 8px;
+}
+
+#comics::-webkit-scrollbar-thumb {
+  background-color: var(--text-color);
+  border-radius: 8px;
+}
+
+/* COMIC */
+
+.comic {
+  width: 15.9rem;
+  height: 25.5rem;
+
+  margin: 0.6rem;
+
+  transition: all 200ms;
+}
+
+.comic img {
+  width: 15.9rem;
+  height: 21rem;
+
+  border-radius: 0.5rem;
+}
+
+.comic h3 {
+  font-weight: normal;
+
+  height: 2rem;
+  margin: 0.5rem 0 0.5rem;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* MODAL */
+
+.modal {
+  display: none;
+
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  position: fixed;
+  z-index: 1;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+
+  width: 50%;
+  padding: 3rem;
+
+  background-color: var(--line-color);
+  border-radius: 0.5rem;
+}
+
+.close {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+
+  font-size: 2.8rem;
+  font-weight: bold;
+
+  color: var(--text-color);
+  cursor: pointer;
+
+  transition: all 200ms;
+}
+
+/* COMIC MODAL */
+
+#comic-title {
+  margin-inline: 2rem;
+}
+
+#comic-details {
+  display: flex;
+}
+
+#comic-image {
+  width: 15.9rem;
+  height: 21rem;
+
+  margin: 2rem 0 2rem;
+  border-radius: 0.5rem;
+}
+
+#comic-description {
+  text-align: justify;
+  margin: 2rem 0 2rem 2rem;
+}
+
+#send-button {
+  width: 20rem;
+  padding: 1.6rem;
+
+  background-color: var(--bg-color);
+  border-radius: 0.5rem;
+
+  transition: all 200ms;
+}
+
+/* MAP MODAL */
+
+#map-modal {
+  position: fixed;
+  z-index: 1;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+
+  width: 50%;
+  height: 60%;
+
+  background-color: var(--line-color);
+  border-radius: 0.5rem;
+}
+
+#map {
+  height: 80%;
+}
+
+#ok-button {
+  position: absolute;
+  bottom: 2rem;
+  right: 1rem;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  transition: all 200ms;
+}
+
+/* ADDRESS MODAL */
+
+#shipping-address {
+  text-align: justify;
+  margin: 2rem 0 2rem;
+}
+
+#finish-button {
+  width: 20rem;
+  padding: 1.6rem;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  border-radius: 0.5rem;
+  transition: all 200ms;
+}
+
+/* HOVER */
+
+.comic:hover,
+#send-button:hover,
+.close:hover,
+#ok-button:hover,
+#finish-button:hover {
+  transform: scale(1.1);
+  opacity: 0.4;
+}
